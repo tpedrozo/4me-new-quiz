@@ -70,7 +70,7 @@ export default function RadioForm({ data }: RadioFormProps) {
         <div className="w-16 absolute top-5 right-10">
           <ProgressBar percentage={data?.percentage} />
         </div>
-        <div className="w-full max-w-[392px] mx-auto flex items-center gap-2 bg-orange-500">
+        <div className="w-full max-w-[392px] mx-auto flex items-center gap-2">
           <Link href={data?.previousStep}>
             <MdArrowBack className="text-2xl" />
           </Link>
@@ -96,7 +96,6 @@ export default function RadioForm({ data }: RadioFormProps) {
           >
             {data?.inputValues?.map((item, index) => (
               <Label
-                htmlFor={item}
                 key={index}
                 className={`flex items-center space-x-2 rounded-md ${
                   optionSelected === item ? `bg-black text-white` : `bg-gray-50`

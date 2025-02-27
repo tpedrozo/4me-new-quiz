@@ -93,8 +93,8 @@ export default function GeneralInfo() {
   console.log("errors", errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="">
-      <div className="grid grid-cols-1 lg:grid-flow-col layout grid-rows-1 relative pb-10">
+    <form onSubmit={handleSubmit(onSubmit)} className="pb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 layout grid-rows-1 relative">
         <div className="w-16 absolute top-5 right-10">
           <ProgressBar percentage={13.34} />
         </div>
@@ -104,7 +104,7 @@ export default function GeneralInfo() {
             src={
               profile.gender === "masculino"
                 ? "https://images.prismic.io/ignewstpedrozo/ZvoWnrVsGrYSwHWY_gender-male.webp?auto=format,compress"
-                : "/female.png"
+                : "https://images.prismic.io/4mequizt/Z7_DiZ7c43Q3gSTj_female.png?auto=format,compress"
             }
             className="z-10"
             quality={100}
@@ -114,7 +114,7 @@ export default function GeneralInfo() {
             priority
           />
         </div>
-        <div className="p-6 lg:p-20 bg-[#F5F0EA] w-full flex flex-col justify-center items-center gap-10">
+        <div className="p-6 lg:p-20 bg-[#F5F0EA] w-full flex flex-col justify-center items-center gap-10 py-10 overflow-y-auto">
           <div className="flex flex-col gap-4 max-w-sm mx-auto">
             <h3 className="text-[#252525] text-4xl w-full">Olá 👋🏻</h3>
             <h2 className="font-hind text-6xl text-start text-regular bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">

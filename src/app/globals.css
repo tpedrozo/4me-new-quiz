@@ -133,7 +133,7 @@
     }
   }
 
-  [data-invalid="true"], [aria-checked="true"] {
+  [data-invalid="true"] {
     @apply border-red-500 bg-red-100; /* Exemplo de estilos */
   }
 }
