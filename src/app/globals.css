@@ -126,4 +126,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @layer {
+    .layout {
+      height: calc(100vh - 52px);
+    }
+  }
+
+  [data-invalid="true"], [aria-checked="true"] {
+    @apply border-red-500 bg-red-100; /* Exemplo de estilos */
+  }
 }

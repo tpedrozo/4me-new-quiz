@@ -27,7 +27,14 @@ export default function GeneralInfo() {
     formState: { errors, isValid },
   } = useForm({
     resolver: zodResolver(profileSchema),
-    mode: "onBlur",
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      zipCode: "",
+      address: "",
+    },
+    mode: "onChange",
   });
 
   const watchZipCode = watch("zipCode");
@@ -55,8 +62,6 @@ export default function GeneralInfo() {
       "address",
       `${addressData.logradouro} - ${addressData.bairro} - ${addressData.localidade}/${addressData.uf}`
     );
-  } else {
-    setValue("address", "");
   }
 
   const onSubmit = (data: Partial<IProfile>) => {
@@ -85,13 +90,15 @@ export default function GeneralInfo() {
     }
   }, [watch("zipCode") as string]);
 
+  console.log("errors", errors);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="">
-      <div className="grid grid-cols-1 lg:grid-cols-2 relative">
+      <div className="grid grid-cols-1 lg:grid-flow-col layout grid-rows-1 relative pb-10">
         <div className="w-16 absolute top-5 right-10">
           <ProgressBar percentage={13.34} />
         </div>
-        <div className="w-full h-screen relative hidden lg:flex">
+        <div className="w-full relative hidden lg:flex">
           <Image
             alt="male-image"
             src={
@@ -107,7 +114,7 @@ export default function GeneralInfo() {
             priority
           />
         </div>
-        <div className="p-6 lg:p-20 bg-[#F5F0EA] w-full h-screen flex flex-col justify-center items-center gap-10">
+        <div className="p-6 lg:p-20 bg-[#F5F0EA] w-full flex flex-col justify-center items-center gap-10">
           <div className="flex flex-col gap-4 max-w-sm mx-auto">
             <h3 className="text-[#252525] text-4xl w-full">Olá 👋🏻</h3>
             <h2 className="font-hind text-6xl text-start text-regular bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">
@@ -130,17 +137,18 @@ export default function GeneralInfo() {
             <Controller
               name="phone"
               control={control}
-              render={({ field }) => (
+              render={({ field, formState }) => (
                 <TextField
                   placeholder="Telefone"
                   {...field}
                   maxLength={15}
-                  errorMessage={errors?.phone?.message as string}
+                  errorMessage={formState.errors.phone?.message as string}
                 />
               )}
               rules={{
                 onChange: (e) => {
-                  setValue(`phone`, formatInputPhone(e.target.value));
+                  const formatted = formatInputPhone(e.target.value);
+                  setValue("phone", formatted, { shouldValidate: true });
                 },
               }}
             />
