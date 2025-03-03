@@ -24,7 +24,7 @@ export default function GeneralInfo() {
     control,
     watch,
     reset,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     resolver: zodResolver(profileSchema),
     defaultValues: {
@@ -34,7 +34,7 @@ export default function GeneralInfo() {
       zipCode: "",
       address: "",
     },
-    mode: "onChange",
+    mode: "onBlur",
   });
 
   const watchZipCode = watch("zipCode");
@@ -174,7 +174,7 @@ export default function GeneralInfo() {
 
             <TextField placeholder="Endereço" {...register("address")} />
 
-            <Button type="submit" className="w-full" disabled={!isValid}>
+            <Button type="submit" className="w-full">
               Iniciar Personalização
             </Button>
           </div>
