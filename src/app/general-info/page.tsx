@@ -114,7 +114,7 @@ export default function GeneralInfo() {
             priority
           />
         </div>
-        <div className="p-6 lg:p-20 bg-[#F5F0EA] w-full flex flex-col justify-center items-center gap-10 py-10 overflow-y-auto">
+        <div className="p-6 lg:p-20 bg-[#F5F0EA] w-full flex flex-col justify-center items-center gap-10 py-40 overflow-y-scroll md:overflow-x-auto">
           <div className="flex flex-col gap-4 max-w-sm mx-auto">
             <h3 className="text-[#252525] text-4xl w-full">Olá 👋🏻</h3>
             <h2 className="font-hind text-6xl text-start text-regular bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">
