@@ -1,9 +1,10 @@
 import { IStep } from "@/models/step-form";
 
 export const WASH_FREQUENCY_DATA: IStep = {
-  groupId: 9,
-  step: 9,
+  groupId: 6,
+  step: 6,
   percentage: 60.03,
+  maxLength: 1,
   title: "Com qual frequência você lava os fios?",
   question: "washFrequency",
   mainRoute: "/wash-frequency",

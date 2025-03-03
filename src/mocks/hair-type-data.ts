@@ -2,7 +2,7 @@ import { IHairType } from "@/models/hair-type.model";
 
 export const HAIR_TYPE_DATA: IHairType[] = [
   {
-    groupId: 6,
+    groupId: 3,
     percentage: 40.02,
     name: "Liso",
     imagePath:
@@ -15,7 +15,7 @@ export const HAIR_TYPE_DATA: IHairType[] = [
       "Fios retos, suaves e geralmente com pouco ou nenhum volume natural.",
   },
   {
-    groupId: 6,
+    groupId: 3,
     percentage: 40.02,
     name: "Ondulado",
     imagePath:
@@ -28,7 +28,7 @@ export const HAIR_TYPE_DATA: IHairType[] = [
       "Fios ondulados, suaves e geralmente com pouco ou nenhum volume natural.",
   },
   {
-    groupId: 6,
+    groupId: 3,
     percentage: 40.02,
     name: "Enrolado",
     imagePath:
@@ -41,7 +41,7 @@ export const HAIR_TYPE_DATA: IHairType[] = [
       "Fios com cachos bem pequenos e densos, geralmente com mais volume e textura mais seca",
   },
   {
-    groupId: 6,
+    groupId: 3,
     percentage: 40.02,
     name: "Crespo",
     imagePath:

@@ -1,9 +1,10 @@
 import { IStep } from "@/models/step-form";
 
 export const YOU_WIRE_ARE_DATA: IStep = {
-  groupId: 12,
-  step: 12,
+  groupId: 9,
+  step: 9,
   percentage: 80.04,
+  maxLength: 1,
   title: "Seus fios são...",
   question: "yourWireAre",
   mainRoute: "/you-wire-are",

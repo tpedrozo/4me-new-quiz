@@ -12,7 +12,7 @@ export default function Gender() {
 
   const handleSaveGender = (genderSelected: string) => {
     updateProfile({ ...profile, gender: genderSelected });
-    router.push("/general-info");
+    router.push("/age");
   };
 
   return (
@@ -72,7 +72,7 @@ export default function Gender() {
       /> */}
       <div className="w-16 absolute top-5 right-10 z-40">
         <ProgressBar
-          percentage={6.67}
+          percentage={0}
           pathColor="white"
           trailColor="#1F1F1F"
           textColor="white"

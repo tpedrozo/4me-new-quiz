@@ -2,7 +2,7 @@ import { IHairType } from "@/models/hair-type.model";
 
 export const HAIR_CONSIDER_DATA: IHairType[] = [
   {
-    groupId: 7,
+    groupId: 4,
     percentage: 46.69,
     name: "Oleoso",
     imagePath:
@@ -15,7 +15,7 @@ export const HAIR_CONSIDER_DATA: IHairType[] = [
       "Fios lisos e suaves, com pouca ou nenhuma textura e tendência a ficar oleosos rapidamente.",
   },
   {
-    groupId: 7,
+    groupId: 4,
     percentage: 46.69,
     name: "Raízes oleosas, pontas secas",
     imagePath:
@@ -28,7 +28,7 @@ export const HAIR_CONSIDER_DATA: IHairType[] = [
       "Fios muito pesados, com excesso de oleosidade visível logo após a lavagem.",
   },
   {
-    groupId: 7,
+    groupId: 4,
     percentage: 46.69,
     name: "Normal",
     imagePath:
@@ -41,7 +41,7 @@ export const HAIR_CONSIDER_DATA: IHairType[] = [
       "Fios equilibrados, com oleosidade controlada e aparência saudável.",
   },
   {
-    groupId: 7,
+    groupId: 4,
     percentage: 46.69,
     name: "Seco",
     imagePath:

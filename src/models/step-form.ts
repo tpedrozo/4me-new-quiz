@@ -1,6 +1,7 @@
 export type IStep = {
   groupId: number;
   step: number;
+  maxLength: number;
   percentage: number;
   title: string;
   question: string;

@@ -1,7 +1,8 @@
 export const GOALS_DATA = {
-  groupId: 5,
-  step: 5,
+  groupId: 2,
+  step: 2,
   percentage: 33.35,
+  maxLength: 4,
   title: "Quais objetivos você busca para o seu cabelo?",
   question: "goal",
   mainRoute: "/goals",
@@ -10,7 +11,7 @@ export const GOALS_DATA = {
   smallImagePath:
     "https://images.prismic.io/ignewstpedrozo/ZwTEVIF3NbkBW_qn_wash-hair-form-small.png?auto=format,compress",
   nextStep: "/hair-type",
-  previousStep: "/complementary",
+  previousStep: "/age",
   inputValues: [
     "Hidratação",
     "Brilho",

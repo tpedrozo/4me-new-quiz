@@ -66,7 +66,9 @@ export default function CheckboxForm({ data }: CheckboxFormProps) {
     if (optionSelected.indexOf(option) >= 0) {
       setOptionSelected(optionSelected.filter((item) => item !== option));
     } else {
-      setOptionSelected([...optionSelected, option]);
+      if (optionSelected.length < data?.maxLength) {
+        setOptionSelected([...optionSelected, option]);
+      }
     }
   };
 
@@ -100,9 +102,14 @@ export default function CheckboxForm({ data }: CheckboxFormProps) {
             <h6>Passo {data?.step}</h6>
           </div>
         </div>
-        <h2 className="font-hind text-4xl text-start text-bold mx-auto w-full max-w-[392px] bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">
-          {data?.title}
-        </h2>
+        <div className="flex flex-col mx-auto w-full max-w-[392px] gap-2">
+          <h2 className="font-hind text-4xl text-start text-bold  bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">
+            {data?.title}
+          </h2>
+          <p className="text-sm text-gray-600 w-full text-left font-bold">
+            Máximo de {data?.maxLength} opções
+          </p>
+        </div>
         <div className="flex flex-col gap-6 w-full">
           <div
             defaultValue="option-one"

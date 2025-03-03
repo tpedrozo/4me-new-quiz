@@ -2,7 +2,7 @@ import { IHairType } from "@/models/hair-type.model";
 
 export const HAIR_LENGTH_HAIR: IHairType[] = [
   {
-    groupId: 8,
+    groupId: 5,
     percentage: 53.36,
     name: "Muito curto",
     imagePath:
@@ -15,7 +15,7 @@ export const HAIR_LENGTH_HAIR: IHairType[] = [
       "Cabelo rente à cabeça, geralmente fácil de modelar e com pouca manutenção.",
   },
   {
-    groupId: 8,
+    groupId: 5,
     percentage: 53.36,
     name: "Curto",
     imagePath:
@@ -28,7 +28,7 @@ export const HAIR_LENGTH_HAIR: IHairType[] = [
       "Cabelo que fica acima do pescoço, com leve movimento e fácil de estilizar.",
   },
   {
-    groupId: 8,
+    groupId: 5,
     percentage: 53.36,
     name: "Nos ombros",
     imagePath:
@@ -40,7 +40,7 @@ export const HAIR_LENGTH_HAIR: IHairType[] = [
     description: "Cabelo na altura dos ombros, versátil e com bom volume.",
   },
   {
-    groupId: 8,
+    groupId: 5,
     percentage: 53.36,
     name: "Grande",
     imagePath:

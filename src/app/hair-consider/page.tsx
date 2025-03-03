@@ -10,7 +10,7 @@ export default function HairConsider() {
       data={data}
       profileOption={"hairConsider"}
       nextStep={"/hair-length"}
-      previousStep={"/hair-consider"}
+      previousStep={"/hair-type"}
       questionTitle={"Como você considera seu cabelo?"}
       mainRoute="/hair-consider"
     />

@@ -12,7 +12,7 @@ export default function HairType() {
       data={data}
       profileOption={"hairType"}
       nextStep={"/hair-consider"}
-      previousStep={"/general-info"}
+      previousStep={"/goals"}
       questionTitle={"Como é o seu cabelo?"}
       mainRoute="/hair-type"
     />

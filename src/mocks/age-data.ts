@@ -1,9 +1,10 @@
 import { IStep } from "@/models/step-form";
 
 export const AGE_DATA: IStep = {
-  groupId: 3,
-  step: 3,
+  groupId: 1,
+  step: 1,
   percentage: 20.01,
+  maxLength: 1,
   title: "Qual é sua idade?",
   question: "age",
   mainRoute: "/age",
@@ -11,8 +12,8 @@ export const AGE_DATA: IStep = {
     "https://images.prismic.io/ignewstpedrozo/ZwS1a4F3NbkBW_nj_wash-hair-form.png?auto=format,compress",
   smallImagePath:
     "https://images.prismic.io/ignewstpedrozo/ZwTEVIF3NbkBW_qn_wash-hair-form-small.png?auto=format,compress",
-  nextStep: "/complementary",
-  previousStep: "/general-info",
+  nextStep: "/goals",
+  previousStep: "/gender",
   inputValues: [
     "Menos de 18 anos",
     "18-30 anos",

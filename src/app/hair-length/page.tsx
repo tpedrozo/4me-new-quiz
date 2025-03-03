@@ -11,7 +11,7 @@ export default function Hairlength() {
       data={data}
       profileOption={"hairLength"}
       nextStep={"/wash-frequency"}
-      previousStep={"/hair-length"}
+      previousStep={"/hair-consider"}
       questionTitle={"Qual o comprimento dos seus cabelos?"}
       mainRoute="/hair-length"
     />

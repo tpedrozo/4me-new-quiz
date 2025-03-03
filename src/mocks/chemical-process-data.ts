@@ -1,9 +1,10 @@
 import { IStep } from "@/models/step-form";
 
 export const CHEMICAL_PROCESS_DATA: IStep = {
-  groupId: 10,
-  step: 10,
+  groupId: 7,
+  step: 7,
   percentage: 66.7,
+  maxLength: 5,
   title: "Você tem algum processo químico?",
   question: "chemicalProcess",
   mainRoute: "/chemical-process",
