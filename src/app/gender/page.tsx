@@ -16,7 +16,7 @@ export default function Gender() {
   };
 
   return (
-    <div className="w-screen h-screen grid grid-cols-2 relative">
+    <div className="w-full h-[calc(100vh_-_104px)] grid grid-flow-row lg:flex">
       <ImageSelector
         src="https://images.prismic.io/4mequizt/Z7_Dip7c43Q3gSTk_gender-male.png?auto=format,compress"
         alt={"male"}

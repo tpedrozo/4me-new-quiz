@@ -66,8 +66,8 @@ export default function RadioForm({ data }: RadioFormProps) {
           priority
         />
       </div>
-      <div className="px-6 py-10 md:p-20 h-screen flex justify-center items-center flex-col gap-6 bg-[#F5F0EA] relative">
-        <div className="w-16 absolute top-5 right-10">
+      <div className="px-6 py-10 pb-10 sm:p-20 h-screen flex justify-start sm:justify-center items-center flex-col gap-6 bg-[#F5F0EA] relative overflow-y-auto">
+        <div className="w-16 absolute top-5 right-10 hidden sm:block">
           <ProgressBar percentage={data?.percentage} />
         </div>
         <div className="w-full max-w-[392px] mx-auto flex items-center gap-2">
@@ -89,7 +89,8 @@ export default function RadioForm({ data }: RadioFormProps) {
           <RadioGroup
             defaultValue={String(optionSelected) as string}
             className={cn(
-              data?.inputValues?.length > 5 && "grid grid-cols-2",
+              data?.inputValues?.length > 5 &&
+                "grid grid-cols-1 sm:grid-cols-2",
               `w-full max-w-[392px] mx-auto`
             )}
             onValueChange={(value) => setOptionSelected(value)}
@@ -99,7 +100,7 @@ export default function RadioForm({ data }: RadioFormProps) {
                 key={index}
                 className={`flex items-center space-x-2 rounded-md ${
                   optionSelected === item ? `bg-black text-white` : `bg-gray-50`
-                } p-3 max-w-[198px]`}
+                } p-3 sm:max-w-[198px]`}
               >
                 <RadioGroupItem
                   value={item}
@@ -117,9 +118,9 @@ export default function RadioForm({ data }: RadioFormProps) {
               </Label>
             ))}
           </RadioGroup>
-          <div className="w-full max-w-[392px] mx-auto flex justify-start">
+          <div className="w-full sm:max-w-[392px] mx-auto flex justify-start">
             <Button
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 w-full"
               disabled={!optionSelected}
               onClick={(e) => {
                 e.preventDefault();

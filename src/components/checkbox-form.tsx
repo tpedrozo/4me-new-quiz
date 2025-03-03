@@ -84,8 +84,8 @@ export default function CheckboxForm({ data }: CheckboxFormProps) {
           priority
         />
       </div>
-      <div className="p-10 lg:p-20 h-screen flex justify-center flex-col gap-6 bg-[#F5F0EA] relative">
-        <div className="w-16 absolute top-5 right-10">
+      <div className="px-6 py-10 sm:p-20 h-screen flex justify-start sm:justify-center flex-col gap-6 bg-[#F5F0EA] relative">
+        <div className="w-16 absolute top-5 right-10 hidden sm:block">
           <ProgressBar percentage={data?.percentage} />
         </div>
         <div className="w-full max-w-[392px] mx-auto flex items-center gap-2">
@@ -141,9 +141,9 @@ export default function CheckboxForm({ data }: CheckboxFormProps) {
               </Label>
             ))}
           </div>
-          <div className="w-full max-w-[392px] mx-auto flex justify-start">
+          <div className="w-full sm:max-w-[392px] mx-auto flex justify-start">
             <Button
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 w-full"
               disabled={!optionSelected}
               onClick={(e) => {
                 e.preventDefault();

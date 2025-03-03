@@ -4,9 +4,9 @@ import { IHairType } from "@/models/hair-type.model";
 import { useRouter } from "next/navigation";
 import React from "react";
 import QuestionHeader from "./question-header";
-import ImageSelector from "./images-selector";
 import Logo from "./logo";
 import ProgressBar from "./progress-bar";
+import ImageSelector from "./image-selector";
 
 type SelectByImageProps = {
   data: IHairType[];
@@ -66,7 +66,9 @@ export default function SelectByImage({
           <div className="w-16">
             <ProgressBar percentage={data[0]?.percentage} />
           </div>
-          <Logo width={80} height={20} />
+          <div className="hidden sm:block">
+            <Logo width={80} height={20} />
+          </div>
         </div>
       </div>
       <div
