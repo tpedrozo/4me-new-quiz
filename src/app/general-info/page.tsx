@@ -12,9 +12,11 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import ProgressBar from "@/components/progress-bar";
 import { brazilianZipcode } from "@/utils/format-brazilian-zipcode";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { getAddress } from "@/services/get-address";
 import TextField from "@/components/text-field";
+import { postProfile } from "@/services/post-profile";
+import Loading from "../loading";
 
 export default function GeneralInfo() {
   const {
@@ -49,6 +51,10 @@ export default function GeneralInfo() {
     enabled: enableToSearch && watchZipCode?.length >= 9,
   });
 
+  const { mutateAsync, isPending } = useMutation({
+    mutationFn: (data: IProfile) => postProfile(data),
+  });
+
   const router = useRouter();
 
   const { profile, updateProfile } = useProfile();
@@ -64,10 +70,25 @@ export default function GeneralInfo() {
     );
   }
 
+  const handleConfirm = async () => {
+    const profileData = {
+      ...profile,
+      authKey: "11c8f3ba-7e05-11ef-9070-26b5f992b1cd",
+    } as IProfile;
+    await mutateAsync(profileData, {
+      onSuccess: () => {
+        router.push("/success");
+      },
+      onError: () => {
+        router.push("/success");
+      },
+    });
+  };
+
   const onSubmit = (data: Partial<IProfile>) => {
     updateProfile({ ...profile, ...data });
 
-    router.push("/age");
+    handleConfirm();
   };
 
   useEffect(() => {
@@ -89,8 +110,6 @@ export default function GeneralInfo() {
       setEnableToSearch(false);
     }
   }, [watch("zipCode") as string]);
-
-  console.log("errors", errors);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="pb-10">
@@ -174,12 +193,13 @@ export default function GeneralInfo() {
 
             <TextField placeholder="Endereço" {...register("address")} />
 
-            <Button type="submit" className="w-full">
-              Iniciar Personalização
+            <Button type="submit" className="w-full" disabled={isPending}>
+              Finalizar
             </Button>
           </div>
         </div>
       </div>
+      {isPending && <Loading />}
     </form>
   );
 }

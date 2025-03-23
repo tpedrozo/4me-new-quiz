@@ -5,33 +5,15 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { BsStars } from "react-icons/bs";
 import Link from "next/link";
-import { useMutation } from "@tanstack/react-query";
-import { postProfile } from "@/services/post-profile";
-import { IProfile } from "@/models/profile.model";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Loading from "../loading";
 
 export default function Review() {
   const { profile, resumeData, setIsFinished } = useProfile();
   const router = useRouter();
 
-  const { mutateAsync, isPending } = useMutation({
-    mutationFn: (data: IProfile) => postProfile(data),
-  });
   const handleConfirm = async () => {
-    const profileData = {
-      ...profile,
-      authKey: "11c8f3ba-7e05-11ef-9070-26b5f992b1cd",
-    } as IProfile;
-    await mutateAsync(profileData, {
-      onSuccess: () => {
-        router.push("/success");
-      },
-      onError: () => {
-        router.push("/success");
-      },
-    });
+    router.push("/general-info");
   };
 
   useEffect(() => {
@@ -90,7 +72,6 @@ export default function Review() {
           ))}
         </div>
       </div>
-      {isPending && <Loading />}
     </div>
   );
 }
