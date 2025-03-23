@@ -115,7 +115,7 @@ export default function CheckboxForm({ data }: CheckboxFormProps) {
             defaultValue="option-one"
             className={cn(
               data?.inputValues?.length > 5 && "grid grid-cols-2 gap-2",
-              `w-full max-w-[392px] mx-auto`
+              `w-full max-w-[392px] mx-auto grid grid-cols-2 gap-2`
             )}
           >
             {data?.inputValues?.map((item, index) => (
