@@ -42,7 +42,7 @@ export const HAIR_LENGTH_HAIR: IHairType[] = [
   {
     groupId: 5,
     percentage: 53.36,
-    name: "Grande",
+    name: "Comprido",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1WYF3NbkBW_nR_long-hair-half.png?auto=format,compress",
     fullImagePath:
