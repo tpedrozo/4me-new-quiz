@@ -73,7 +73,7 @@ export default function CheckboxForm({ data }: CheckboxFormProps) {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 bg-[#F5F0EA]">
       <div className="hidden lg:block w-full h-screen relative">
         <Image
           alt="male-image"
@@ -86,79 +86,81 @@ export default function CheckboxForm({ data }: CheckboxFormProps) {
           priority
         />
       </div>
-      <div className="px-6 py-10 sm:p-20 h-screen flex justify-start sm:justify-center flex-col gap-6 bg-[#F5F0EA] relative">
+      <div className="px-6 py-10 sm:p-20 h-full min-h-screen flex justify-start sm:justify-center flex-col gap-6 bg-[#F5F0EA] relative">
         <div className="w-16 absolute top-5 right-10 hidden sm:block">
           <ProgressBar percentage={data?.percentage} />
         </div>
-        <div className="w-full max-w-[392px] mx-auto flex items-center gap-2">
-          <Link href={data?.previousStep}>
-            <MdArrowBack className="text-2xl" />
-          </Link>
-
-          <Logo />
-        </div>
-        <div className="w-full max-w-[392px] mx-auto">
-          <div className="flex justify-center items-center p-2 bg-gray-50 w-full max-w-[100px] rounded-full">
-            <h6>Passo {data?.step}</h6>
-          </div>
-        </div>
-        <div className="flex flex-col mx-auto w-full max-w-[392px] gap-2">
-          <h2 className="font-hind text-4xl text-start text-bold  bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">
-            {data?.title}
-          </h2>
-          <p className="text-sm text-gray-600 w-full text-left font-bold">
-            Máximo de {data?.maxLength} opções
-          </p>
-        </div>
         <div className="flex flex-col gap-6 w-full">
-          <div
-            defaultValue="option-one"
-            className={cn(
-              data?.inputValues?.length > 5 && "grid grid-cols-2 gap-2",
-              `w-full max-w-[392px] mx-auto grid grid-cols-2 gap-2`
-            )}
-          >
-            {data?.inputValues?.map((item, index) => (
-              <Label
-                htmlFor={item}
-                key={index}
-                className={`flex items-center space-x-2 rounded-md ${
-                  optionSelected.includes(item)
-                    ? `bg-black text-white`
-                    : `bg-gray-50`
-                } p-3 max-w-[198px]`}
-              >
-                <Checkbox
-                  value={item}
-                  checked={optionSelected.includes(item)}
-                  id={item}
-                  className={`${
-                    optionSelected.includes(item)
-                      ? `border-gray-500`
-                      : `border-black`
-                  }`}
-                  onCheckedChange={() => handleSelectOption(item)}
-                />
+          <div className="w-full max-w-[392px] mx-auto flex items-center gap-2">
+            <Link href={data?.previousStep}>
+              <MdArrowBack className="text-2xl" />
+            </Link>
+
+            <Logo />
+          </div>
+          <div className="w-full max-w-[392px] mx-auto">
+            <div className="flex justify-center items-center p-2 bg-gray-50 w-full max-w-[100px] rounded-full">
+              <h6>Passo {data?.step}</h6>
+            </div>
+          </div>
+          <div className="flex flex-col mx-auto w-full max-w-[392px] gap-2">
+            <h2 className="font-hind text-4xl text-start text-bold  bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">
+              {data?.title}
+            </h2>
+            <p className="text-sm text-gray-600 w-full text-left font-bold">
+              Máximo de {data?.maxLength} opções
+            </p>
+          </div>
+          <div className="flex flex-col gap-6 w-full">
+            <div
+              defaultValue="option-one"
+              className={cn(
+                data?.inputValues?.length > 5 && "grid grid-cols-2 gap-2",
+                `w-full max-w-[392px] mx-auto grid grid-cols-2 gap-2`
+              )}
+            >
+              {data?.inputValues?.map((item, index) => (
                 <Label
                   htmlFor={item}
-                  className="peer-checked:text-black cursor-pointer"
+                  key={index}
+                  className={`flex items-center space-x-2 rounded-md ${
+                    optionSelected.includes(item)
+                      ? `bg-black text-white`
+                      : `bg-gray-50`
+                  } p-3 max-w-[198px]`}
                 >
-                  {item}
+                  <Checkbox
+                    value={item}
+                    checked={optionSelected.includes(item)}
+                    id={item}
+                    className={`${
+                      optionSelected.includes(item)
+                        ? `border-gray-500`
+                        : `border-black`
+                    }`}
+                    onCheckedChange={() => handleSelectOption(item)}
+                  />
+                  <Label
+                    htmlFor={item}
+                    className="peer-checked:text-black cursor-pointer"
+                  >
+                    {item}
+                  </Label>
                 </Label>
-              </Label>
-            ))}
-          </div>
-          <div className="w-full sm:max-w-[392px] mx-auto flex justify-start">
-            <Button
-              className="flex items-center gap-2 w-full"
-              disabled={!optionSelected}
-              onClick={(e) => {
-                e.preventDefault();
-                handleSaveAndNextStep();
-              }}
-            >
-              Avançar <MdArrowForward className="text-white" />
-            </Button>
+              ))}
+            </div>
+            <div className="w-full sm:max-w-[392px] mx-auto flex justify-start">
+              <Button
+                className="flex items-center gap-2 w-full"
+                disabled={!optionSelected}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSaveAndNextStep();
+                }}
+              >
+                Avançar <MdArrowForward className="text-white" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>

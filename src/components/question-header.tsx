@@ -12,7 +12,7 @@ export default function QuestionHeader({ title }: QuestionHeaderProps) {
   const router = useRouter();
 
   return (
-    <div className="py-7 px-10 flex justify-between bg-[#F5F0EA]">
+    <div className="py-4 sm:py-7 px-4 sm:px-10 flex justify-between bg-[#F5F0EA]">
       <div className="flex items-center gap-10">
         <Button variant="link" onClick={() => router.back()}>
           <FaArrowLeft className=" text-primary" />

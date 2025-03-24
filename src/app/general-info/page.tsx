@@ -10,13 +10,13 @@ import { IProfile } from "@/models/profile.model";
 import { useProfile } from "@/contexts/profile-context";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import ProgressBar from "@/components/progress-bar";
 import { brazilianZipcode } from "@/utils/format-brazilian-zipcode";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { getAddress } from "@/services/get-address";
 import TextField from "@/components/text-field";
 import { postProfile } from "@/services/post-profile";
 import Loading from "../loading";
+import Footer from "@/components/footer";
 
 export default function GeneralInfo() {
   const {
@@ -112,11 +112,11 @@ export default function GeneralInfo() {
   }, [watch("zipCode") as string]);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="pb-10">
-      <div className="grid grid-cols-1 lg:grid-cols-2 layout grid-rows-1 relative">
-        <div className="w-16 absolute top-5 right-10">
-          <ProgressBar percentage={13.34} />
-        </div>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="grid grid-rows-[1fr_auto] h-screen"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2 relative">
         <div className="w-full relative hidden lg:flex">
           <Image
             alt="male-image"
@@ -133,7 +133,7 @@ export default function GeneralInfo() {
             priority
           />
         </div>
-        <div className="p-6 lg:p-20 bg-[#F5F0EA] w-full flex flex-col justify-center items-center gap-10 py-40 overflow-y-scroll md:overflow-x-auto">
+        <div className="p-6 bg-[#F5F0EA] w-full h-full flex flex-col justify-center items-center gap-10">
           <div className="flex flex-col gap-4 max-w-sm mx-auto">
             <h3 className="text-[#252525] text-4xl w-full">Olá 👋🏻</h3>
             <h2 className="font-hind text-6xl text-start text-regular bg-gradient-to-r from-black via-[#8F8C89] to-[#8F8C89] inline-block text-transparent bg-clip-text">
@@ -145,10 +145,13 @@ export default function GeneralInfo() {
             <TextField
               placeholder="Nome"
               {...register("name")}
+              type="text"
               errorMessage={errors?.name?.message as string}
             />
             <TextField
+              className="bg-red-500"
               placeholder="Email"
+              type="email"
               {...register("email")}
               errorMessage={errors?.email?.message as string}
             />
@@ -160,6 +163,7 @@ export default function GeneralInfo() {
                 <TextField
                   placeholder="Telefone"
                   {...field}
+                  type="text"
                   maxLength={15}
                   errorMessage={formState.errors.phone?.message as string}
                 />
@@ -179,6 +183,7 @@ export default function GeneralInfo() {
                 <TextField
                   placeholder="CEP"
                   {...field}
+                  type="text"
                   maxLength={9}
                   errorMessage={errors?.zipCode?.message as string}
                 />
@@ -199,7 +204,10 @@ export default function GeneralInfo() {
           </div>
         </div>
       </div>
-      {isPending && <Loading />}
+      <div className="">
+        <Footer isFixed={false} />
+        {isPending && <Loading />}
+      </div>
     </form>
   );
 }

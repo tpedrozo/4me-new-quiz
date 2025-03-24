@@ -20,9 +20,9 @@ export default function ConfirmationStep() {
   }, []);
 
   return (
-    <div>
+    <div className="grid grid-rows-[auto_1fr_auto] h-screen">
       <QuestionHeader title={actionData?.questionTitle as string} />
-      <div className="w-full h-[calc(100vh_-_104px)] grid grid-cols-1 relative">
+      <div className="w-full h-full grid grid-cols-1 relative">
         <Image
           alt={actionData?.title as string}
           src={actionData?.imagePath as string}
@@ -34,7 +34,7 @@ export default function ConfirmationStep() {
           priority
         />
       </div>
-      <div className="absolute bottom-[52px]  z-30 p-10 bg-[#1f1f1f] w-full">
+      <div className="p-4 sm:p-10 bg-[#1f1f1f] w-full">
         <Link
           href={actionData?.previousStep as string}
           className="absolute bg-white -top-[68px] left-0 p-6 cursor-pointer"

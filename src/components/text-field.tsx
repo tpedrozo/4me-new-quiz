@@ -12,7 +12,6 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
         <input
           ref={ref}
           {...props}
-          type="text"
           data-invalid={errorMessage ? "true" : "false"}
           className="w-full h-[50px] indent-4 rounded text-gray-600 data-invalid:border-2"
         />
