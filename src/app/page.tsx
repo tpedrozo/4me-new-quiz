@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="bg-[#0A0A0A] relative">
       <div className="w-full h-screen grid grid-rows-[1fr_auto] overflow-hidden">
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full flex items-center justify-center">
           <Image
             alt="woman with hair in a half face"
             src="https://images.prismic.io/4mequizt/Z7-x6p7c43Q3gSPQ_home.webp?auto=format,compress"
