@@ -89,8 +89,8 @@ export default function RadioForm({ data }: RadioFormProps) {
           <RadioGroup
             defaultValue={String(optionSelected) as string}
             className={cn(
-              data?.inputValues?.length > 5 && "grid grid-cols-2 gap-2",
-              `w-full max-w-[392px] mx-auto grid grid-cols-2 gap-2`
+              data?.inputValues?.length > 4 && "grid grid-cols-2 gap-2",
+              `w-full max-w-[392px] mx-auto grid grid-cols-1 gap-2`
             )}
             onValueChange={(value) => setOptionSelected(value)}
           >
