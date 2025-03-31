@@ -70,11 +70,7 @@ export default function GeneralInfo() {
     );
   }
 
-  const handleConfirm = async () => {
-    const profileData = {
-      ...profile,
-      authKey: "11c8f3ba-7e05-11ef-9070-26b5f992b1cd",
-    } as IProfile;
+  const handleConfirm = async (profileData: IProfile) => {
     await mutateAsync(profileData, {
       onSuccess: () => {
         router.push("/success");
@@ -86,9 +82,13 @@ export default function GeneralInfo() {
   };
 
   const onSubmit = (data: Partial<IProfile>) => {
+    const profileData = {
+      ...data,
+      ...profile,
+      authKey: "11c8f3ba-7e05-11ef-9070-26b5f992b1cd",
+    };
     updateProfile({ ...profile, ...data });
-
-    handleConfirm();
+    handleConfirm(profileData as IProfile);
   };
 
   useEffect(() => {
