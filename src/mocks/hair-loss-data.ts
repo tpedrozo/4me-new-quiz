@@ -3,7 +3,7 @@ import { IStep } from "@/models/step-form";
 export const HAIR_LOSS_DATA: IStep = {
   groupId: 8,
   step: 8,
-  percentage: 73.37,
+  percentage: 66,
   maxLength: 1,
   title: "Você teve queda de cabelo nos últimos meses?",
   question: "hairLoss",

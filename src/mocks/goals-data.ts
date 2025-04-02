@@ -1,7 +1,7 @@
 export const GOALS_DATA = {
   groupId: 2,
   step: 2,
-  percentage: 33.35,
+  percentage: 16,
   maxLength: 4,
   title: "Quais objetivos você busca para o seu cabelo?",
   question: "goal",

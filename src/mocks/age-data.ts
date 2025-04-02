@@ -3,7 +3,7 @@ import { IStep } from "@/models/step-form";
 export const AGE_DATA: IStep = {
   groupId: 1,
   step: 1,
-  percentage: 20.01,
+  percentage: 8,
   maxLength: 1,
   title: "Qual é sua idade?",
   question: "age",

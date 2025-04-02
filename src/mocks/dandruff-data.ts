@@ -3,7 +3,7 @@ import { IStep } from "@/models/step-form";
 export const DANDRUFF_DATA: IStep = {
   groupId: 10,
   step: 10,
-  percentage: 86.71,
+  percentage: 83,
   maxLength: 3,
   title: "Você costuma ter caspa?",
   question: "dandruff",

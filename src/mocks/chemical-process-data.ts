@@ -3,7 +3,7 @@ import { IStep } from "@/models/step-form";
 export const CHEMICAL_PROCESS_DATA: IStep = {
   groupId: 7,
   step: 7,
-  percentage: 66.7,
+  percentage: 58,
   maxLength: 3,
   title: "Você tem algum processo químico?",
   question: "chemicalProcess",

@@ -3,7 +3,7 @@ import { IStep } from "@/models/step-form";
 export const COMPLEMENTARY_DATA: IStep = {
   groupId: 12,
   step: 12,
-  percentage: 26.68,
+  percentage: 100,
   maxLength: 9,
   title: "Algo a complementar?",
   question: "complementary",

@@ -3,7 +3,7 @@ import { IStep } from "@/models/step-form";
 export const WASH_FREQUENCY_DATA: IStep = {
   groupId: 6,
   step: 6,
-  percentage: 60.03,
+  percentage: 50,
   maxLength: 1,
   title: "Com qual frequência você lava os fios?",
   question: "washFrequency",
