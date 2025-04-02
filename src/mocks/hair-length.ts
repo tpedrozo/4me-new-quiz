@@ -3,7 +3,7 @@ import { IHairType } from "@/models/hair-type.model";
 export const HAIR_LENGTH_HAIR: IHairType[] = [
   {
     groupId: 5,
-    percentage: 53.36,
+    percentage: 41,
     name: "Muito curto",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1aoF3NbkBW_nh_very-short-hair-half.png?auto=format,compress",
@@ -16,7 +16,7 @@ export const HAIR_LENGTH_HAIR: IHairType[] = [
   },
   {
     groupId: 5,
-    percentage: 53.36,
+    percentage: 41,
     name: "Curto",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1YIF3NbkBW_nY_short-hair-half.png?auto=format,compress",
@@ -29,7 +29,7 @@ export const HAIR_LENGTH_HAIR: IHairType[] = [
   },
   {
     groupId: 5,
-    percentage: 53.36,
+    percentage: 41,
     name: "Nos ombros",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1YoF3NbkBW_na_shoulder-length-hair-half.png?auto=format,compress",
@@ -41,7 +41,7 @@ export const HAIR_LENGTH_HAIR: IHairType[] = [
   },
   {
     groupId: 5,
-    percentage: 53.36,
+    percentage: 41,
     name: "Comprido",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1WYF3NbkBW_nR_long-hair-half.png?auto=format,compress",

@@ -3,7 +3,7 @@ import { IStep } from "@/models/step-form";
 export const FRIZZ_TYPE_DATA: IStep = {
   groupId: 11,
   step: 11,
-  percentage: 91,
+  percentage: 83,
   maxLength: 3,
   title: "Em relação a frizz, seus fios são...",
   question: "frizzType",

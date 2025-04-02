@@ -3,7 +3,7 @@ import { IHairType } from "@/models/hair-type.model";
 export const HAIR_CONSIDER_DATA: IHairType[] = [
   {
     groupId: 4,
-    percentage: 46.69,
+    percentage: 33,
     name: "Oleoso",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1XoF3NbkBW_nW_oily-hair.png?auto=format,compress",
@@ -16,7 +16,7 @@ export const HAIR_CONSIDER_DATA: IHairType[] = [
   },
   {
     groupId: 4,
-    percentage: 46.69,
+    percentage: 33,
     name: "Raízes oleosas, pontas secas",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1UIF3NbkBW_nI_extremely-oily-hair-half.png?auto=format,compress",
@@ -29,7 +29,7 @@ export const HAIR_CONSIDER_DATA: IHairType[] = [
   },
   {
     groupId: 4,
-    percentage: 46.69,
+    percentage: 33,
     name: "Normal",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1XIF3NbkBW_nT_normal-hair-half.png?auto=format,compress",
@@ -42,7 +42,7 @@ export const HAIR_CONSIDER_DATA: IHairType[] = [
   },
   {
     groupId: 4,
-    percentage: 46.69,
+    percentage: 33,
     name: "Seco",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1T4F3NbkBW_nH_dry-hair.png?auto=format,compress",
@@ -54,7 +54,7 @@ export const HAIR_CONSIDER_DATA: IHairType[] = [
   },
   {
     groupId: 7,
-    percentage: 46.69,
+    percentage: 33,
     name: "Muito seco",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1aIF3NbkBW_ng_very-dry-hair.png?auto=format,compress",

@@ -3,7 +3,7 @@ import { IHairType } from "@/models/hair-type.model";
 export const HAIR_TYPE_DATA: IHairType[] = [
   {
     groupId: 3,
-    percentage: 40.02,
+    percentage: 25,
     name: "Liso",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/Z0DcJa8jQArT1OO3_straight-hai-half.png?auto=format,compress",
@@ -16,7 +16,7 @@ export const HAIR_TYPE_DATA: IHairType[] = [
   },
   {
     groupId: 3,
-    percentage: 40.02,
+    percentage: 25,
     name: "Ondulado",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1ZIF3NbkBW_nc_straich-hair-half.png?auto=format,compress",
@@ -29,7 +29,7 @@ export const HAIR_TYPE_DATA: IHairType[] = [
   },
   {
     groupId: 3,
-    percentage: 40.02,
+    percentage: 25,
     name: "Enrolado",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1SoF3NbkBW_nC_curly-hair-half.png?auto=format,compress",
@@ -42,7 +42,7 @@ export const HAIR_TYPE_DATA: IHairType[] = [
   },
   {
     groupId: 3,
-    percentage: 40.02,
+    percentage: 25,
     name: "Crespo",
     imagePath:
       "https://images.prismic.io/ignewstpedrozo/ZwS1SYF3NbkBW_nA_afro-hair-half.png?auto=format,compress",
