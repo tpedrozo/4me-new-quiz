@@ -13,4 +13,5 @@ export const profileSchema = z.object({
     .default(""),
   zipCode: z.string().min(1).default(""),
   address: z.string().min(3).default(""),
+  number: z.string().min(1).default(""),
 });

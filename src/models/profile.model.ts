@@ -7,6 +7,7 @@ export interface IProfile {
   email: string;
   phone: string;
   address: string;
+  number: string;
   hairType: string;
   hairLength: string;
   washFrequency: string;

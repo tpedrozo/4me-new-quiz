@@ -35,6 +35,7 @@ export default function GeneralInfo() {
       phone: "",
       zipCode: "",
       address: "",
+      number: "",
     },
     mode: "onBlur",
   });
@@ -197,6 +198,13 @@ export default function GeneralInfo() {
             />
 
             <TextField placeholder="Endereço" {...register("address")} />
+
+            <TextField
+              placeholder="Número"
+              {...register("number")}
+              type="text"
+              errorMessage={errors?.number?.message as string}
+            />
 
             <Button type="submit" className="w-full" disabled={isPending}>
               Finalizar
